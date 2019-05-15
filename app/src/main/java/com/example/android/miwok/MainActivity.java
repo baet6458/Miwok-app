@@ -18,7 +18,9 @@ package com.example.android.miwok;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.TextureView;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,10 +30,55 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
+
+        //Find the view that shows the numbers category
+        TextView numbers = (TextView) findViewById(R.id.numbers);
+
+        //create an on click listener to that view
+        numbers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent numbers = new Intent(MainActivity.this,NumbersActivity.class );
+                startActivity(numbers);
+            }
+        });
+
+        //Find the view that shows the numbers category
+        TextView colors = (TextView) findViewById(R.id.colors);
+
+        //create an on click listener to that view
+        numbers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent colored = new Intent(MainActivity.this,ColorsActivity.class );
+                startActivity(colored);
+            }
+        });
+
+        //Find the view that shows the numbers category
+        TextView famMembers = (TextView) findViewById(R.id.family);
+
+        //create an on click listener to that view
+        numbers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent familyMembers = new Intent(MainActivity.this,FamilyActivity.class );
+                startActivity(familyMembers);
+            }
+        });
+
+        //Find the view that shows the numbers category
+        TextView phrases = (TextView) findViewById(R.id.phrases);
+
+        //create an on click listener to that view
+        numbers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent phrases = new Intent(MainActivity.this,PhrasesActivity.class );
+                startActivity(phrases);
+            }
+        });
     }
 
-    public void openNumbersList(View view) {
-        Intent numbers = new Intent(this,NumbersActivity.class);
-        startActivity(numbers);
-    }
+
 }
