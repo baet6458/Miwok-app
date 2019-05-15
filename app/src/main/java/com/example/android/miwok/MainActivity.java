@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         TextView colors = (TextView) findViewById(R.id.colors);
 
         //create an on click listener to that view
-        numbers.setOnClickListener(new View.OnClickListener() {
+        colors.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent colored = new Intent(MainActivity.this,ColorsActivity.class );
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         TextView famMembers = (TextView) findViewById(R.id.family);
 
         //create an on click listener to that view
-        numbers.setOnClickListener(new View.OnClickListener() {
+        famMembers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent familyMembers = new Intent(MainActivity.this,FamilyActivity.class );
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         TextView phrases = (TextView) findViewById(R.id.phrases);
 
         //create an on click listener to that view
-        numbers.setOnClickListener(new View.OnClickListener() {
+        phrases.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent phrases = new Intent(MainActivity.this,PhrasesActivity.class );
